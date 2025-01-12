@@ -1,0 +1,258 @@
+/* Genel sıfırlama */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body kısmı */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;  /* Arka plan siyah */
+    color: rgb(255, 255, 255);  /* Yazılar beyaz */
+    line-height: 1.6;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+/* Header kısmı */
+header {
+    background-color: #000;  /* Header arka planı siyah */
+    padding: 20px;
+    top: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end; /* Menüleri sağa yasla */
+    gap: 100px; /* Aralarda fazla boşluk */
+    padding-right: 20px; /* Sağda boşluk bırakmak için */
+    width: 100%;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #222; /* Sarı metin rengi */
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease;
+    position: relative;
+    z-index: 1000;
+}
+
+nav ul li a:hover {
+    color: #fff; /* Hoverda beyaz yazı */
+}
+
+/* Hero kısmı */
+/* Hero kısmı */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* İçeriği sağa yasla */
+    height: 100vh;
+    background: #000; /* Arka plan siyah */
+    position: relative;
+    padding: 20px;
+    flex-direction: row-reverse; /* İçeriği sağa yerleştir */
+    text-align: right; /* Yazıları sağa hizala */
+    padding-right: 20px; /* Sağda boşluk bırak */
+}
+
+/* Hero içerik kısmı */
+.hero-content h1 {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* THE ile çizgi arasındaki boşluk */
+    font-size: 64px;
+    font-weight: bold;
+    position: relative; /* Konumlandırma için gerekli */
+    top: -210px;
+    left: 60px;
+}
+
+.hero-content .the-text {
+    font-size: 64px;
+    color: rgb(251, 211, 53); /* Sarı renk */
+}
+
+.hero-content .line {
+    flex-grow: 0;
+    width: 270px;
+    height: 4px; /* Çizgi kalınlığı */
+    background-color: rgb(251, 211, 53); /* Sarı renk */
+}
+
+.hero-content .yellow-beast {
+    font-size: 48px;
+    color: rgb(251, 211, 53); /* Beyaz renk */
+    margin-top: 10px; /* Üst boşluk */
+    text-align: center; /* Ortala */
+    position: relative;
+    top: -250px;
+    left: 60px;
+}
+
+p {
+    position: relative;
+    top: -235px;
+    left: 60px;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+
+
+.pre-order {
+    padding: 15px 25px;
+    background-color: #222;  /* Koyu siyah buton */
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: rgb(251, 211, 53);
+    border-radius: 25px;
+    transition: background-color 0.3s, transform 0.3s;
+    position: absolute; /* Konumlandırmayı mutlak yap */
+    left: 80px; /* Sol kenara yasla */
+    top: 550px;
+}
+
+
+.pre-order:hover {
+    background-color: rgb(251, 211, 53);  /* Buton hoverda sarı */
+    color: #222;
+    transform: scale(1.1); /* Buton hover büyümesi */
+}
+
+/* Araba görseli */
+.car-image-container {
+    position: absolute;
+    top: -200%;
+    right: -150%;
+    width: 3500px; /* 10 kat büyütüldü */
+    height: 3500px; /* 10 kat büyütüldü */
+    border-radius: 0px 0px 0px 1750px;
+    background-color: rgb(251, 211, 53);  /* Sarı arka plan */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Görsel etrafında gölge */
+    transform: rotate(150deg);
+}
+.new-car-image-container {
+    position: absolute;
+    top: 350px;
+    left: 1000px;
+    width: 650px;
+    height: 650px;
+    background-color: transparent;
+}
+.car-image {
+    width: 100%;
+    height: auto;
+
+}
+
+/* Galeri kısmı */
+.gallery {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #000;  /* Siyah arka plan */
+}
+
+.gallery h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-transform: uppercase; /* Başlık için harf büyütme */
+}
+
+.image-thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* Resimler arasına çok fazla boşluk */
+}
+
+.image-thumbnails img {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    top: -350px;
+    left: -590px;
+}
+
+.image-thumbnails img:hover {
+    transform: scale(1.05); /* Resimleri biraz büyütme */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4); /* Hoverda gölge ekleme */
+}
+
+.new-image-thumbnails {
+    display: flex;
+    justify-content: center;
+}
+
+.new-image-thumbnails img {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    position: relative;
+    top: -1190px;
+    left: -800px;
+}
+.new-image-thumbnails img:hover {
+    transform: scale(1.05); /* Resimleri biraz büyütme */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4); /* Hoverda gölge ekleme */
+}
+
+
+.Porsche {
+    display: flex;
+    justify-content: center;
+}
+
+.Porsche img {
+    width: 160px;
+    height: 210px;
+    object-fit: cover;
+    position: relative;
+    top: -540px;
+    left: 850px;
+}
+
+
+
+
+
+
+
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        justify-content: center; /* Yazıları ortala */
+    }
+
+    .hero-content h1 {
+        font-size: 40px;
+    }
+
+    .car-image-container {
+        width: 250px;
+        height: 250px;
+    }
+
+    .image-thumbnails {
+        flex-direction: column;
+        gap: 30px; /* Resimler arasındaki boşluğu artır */
+    }
+
+    .image-thumbnails img {
+        width: 100%;
+    }
+}
